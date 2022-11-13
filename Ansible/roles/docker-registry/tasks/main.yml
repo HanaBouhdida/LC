@@ -1,0 +1,12 @@
+---
+# tasks file for docker-registry
+- name: login dockerhub
+  docker_login:
+    username: "hanabouhdida"
+    password: "hanabouhdida123"
+- name: push to dockerhub
+  docker_image:
+    name: appfront:latest
+    repository: hanabouhdida/lc
+    push: yes
+    source: local
