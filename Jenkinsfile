@@ -11,5 +11,12 @@ pipeline {
                 }
             }
         }
+	stage('python test'){
+            steps{
+                script{
+                    sh "python3 --version"
+                }
+            }
+        }
 }
 }
